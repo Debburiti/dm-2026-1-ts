@@ -9,7 +9,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Index() {
   let MyComponent;
   const [isEnabled, setIsEnabled] = useState(false);
+  const [showUpdate, setShowUpdate] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+
+  if (showUpdate){
+    return
+  }
   if (isEnabled) {
     // MyComponent = <ScrollViewApp />;
     // MyComponent = <FlatListExample />;
